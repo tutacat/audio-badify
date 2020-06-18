@@ -1,5 +1,5 @@
 # audio-badify
-DL : <a href="https://raw.githubusercontent.com/tutacat/audio-badify/master/audio-badify.sh" download>https://raw.githubusercontent.com/tutacat/audio-badify/master/audio-badify.sh</a>
+DL : <a href="https://raw.githubusercontent.com/tutacat/audio-badify/master/audio-badify.sh" download="audio-badify.sh">https://raw.githubusercontent.com/tutacat/audio-badify/master/audio-badify.sh</a>
 ### Usage:
 ````
  -h  --help  Print this help.
