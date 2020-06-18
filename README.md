@@ -6,6 +6,9 @@ or
 
 ## Usage:
 ```-h | --help``` Print help output.
+
 ```-m | --mode``` Select badify mode, currently 1 (22.5Khz), or 2 (8Khz).
+
 ```     --exec``` Pass an ffmpeg executable
+
 ```-y         ``` Make ffmpeg assume yes (Pass ```-y``` for overwrite, etc)
