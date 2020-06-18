@@ -6,7 +6,7 @@
      --exec  Pass an ffmpeg executable
  -y          Make ffmpeg assume yes (Pass ```-y``` for overwrite, etc)
 ````
-<br><br>
+<br>
 ### How it works
 You can make audio files sound bad with these ```ffmpeg``` args
 
