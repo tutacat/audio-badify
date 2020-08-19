@@ -2,7 +2,7 @@
 «Audio is too good?»
 
 DL (save as) https://raw.githubusercontent.com/tutacat/audio-badify/master/audio-badify.sh<br>
-run `bash audio-badify.sh`
+run `<your>sh audio-badify.sh`
 ### Usage:
 ````
  -h  --help  Print this help.
