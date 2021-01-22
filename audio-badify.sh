@@ -1,7 +1,6 @@
 EXEC='ffmpeg'
 YYY=''
 MODE=1
-echo "$@"
 POSITIONAL=()
 
 while [[ $# -gt 0 ]]
@@ -9,11 +8,13 @@ do
   key="$1"
   case $key in
     -h|--help)
+    echo "$@"
     echo -e "Audio Badify script (ffmpeg) usage.\n\naudio-badify -[m] <input> <output>\n-h  --help  Show this help.\n-m  --mode  Badify mode, currently 1 (22.5Khz), or 2 (8Khz)\n    --exec  Specify the ffmpeg executable\n-y          ffmpeg assume yes (overwrite, etc.)"
     exit 1
     shift
     ;;
     -m|--mode)
+    echo "$@"
     MODE=$2
     shift
     shift
