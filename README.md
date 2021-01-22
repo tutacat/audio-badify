@@ -5,7 +5,7 @@ DL (save as) https://raw.githubusercontent.com/tutacat/audio-badify/master/audio
 run `sh audio-badify.sh`
 ### Usage:
 ````
-audio-badify -[m] <input> <output>
+audio-badify [-m n] <input> <output>
  -h  --help  Print this help.
  -m  --mode  Select badify mode, currently 1 (22.5Khz), or 2 (8Khz).
      --exec  Pass an ffmpeg executable
