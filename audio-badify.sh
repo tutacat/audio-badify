@@ -1,7 +1,7 @@
 EXEC='ffmpeg'
 YYY=''
 MODE=1
-POSITIONAL=()
+POSITIONAL=
 
 while [[ $# -gt 0 ]]
 do
