@@ -16,20 +16,18 @@ do
     -m|--mode)
     echo "$@"
     MODE=$2
-    shift
-    shift
+    shift 2
     ;;
     --exec)
     EXEC="$2"
-    shift
-    shift
+    shift 2
     ;;
     -y)
     YYY="-y"
     shift
     ;;
     *)
-    POSITION+=("$1")
+    POSITIONAL+=("$1")
     shift
     ;;
   esac
