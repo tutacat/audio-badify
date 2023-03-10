@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Checking hash..." >&2
-if sha256sum audio-badify.sh | diff - _hash; then
+if sha256sum audio-badify.sh | ! diff -q - _hash; then
   echo "Script changed." >&2 
   if ! which ffmpeg >/dev/null; then 
     echo "Installing ffmpeg..." >&2
