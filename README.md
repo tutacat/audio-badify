@@ -1,6 +1,6 @@
 # audio-badify
+[![](https://github.com/tutacat/audio-badify/actions/workflows/tests.yml/badge.svg)](https://github.com/tutacat/audio-badify/actions/workflows/tests.yml)  
 «Audio is too good?»
-
 DL (save as) https://raw.githubusercontent.com/tutacat/audio-badify/master/audio-badify.sh<br>
 run `bash audio-badify.sh` or `zsh audio-badify.sh`
 ### Usage:
