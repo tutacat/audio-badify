@@ -57,4 +57,4 @@ if [ ! -z "$a" ] && [ ! -z "$b" ]; then
   fi
 fi
 
-exit 1
+exit 0
