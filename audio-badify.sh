@@ -27,28 +27,31 @@ do
     shift
     ;;
     *)
-    POSITIONAL+=("$1")
+    if [ ! "$a" ]; then a="$1"; else b="$(echo "$1"|sed 's/\\.ogg$/\\.mp3/')"; fi
     shift
     ;;
   esac
 done
 
 set -- "${POSITIONAL[@]}"
-if [ ! -e $1 ]; then
-  echo $1: No such file or directory.
+if [ ! -e "$a" ]; then
+  echo $a: No such file or directory.
   exit 1
-elif [ -d $1 ]; then
-  echo $1: Is a directory.
+elif [ -d "$a" ]; then
+  echo $a: Is a directory.
   exit 1
 fi
-if [ ! -z $1 ] && [ ! -z $2 ]; then
+if [ -d "$b" ]; then
+  echo echo $b: Is a directory.
+fi
+if [ ! -z "$a" ] && [ ! -z "$b" ]; then
   echo yes
   if [ ${MODE} -eq 1 ]; then
     echo mode 1
-    ${EXEC} -i "$1" -ar 22050 -b:a 1k ${YYY} "$2"
+    ${EXEC} -i "$a" -ar 22050 -b:a 1k ${YYY} "$b.mp3"
   elif [ ${MODE} -eq 2 ]; then
     echo mode 2
-    ${EXEC} -i "$1" -ar 8000 -b:a 100 ${YYY} "$2"
+    ${EXEC} -i "$a" -ar 8000 -b:a 500 ${YYY} "$b.mp3"
   else
     echo "Incorrect mode specified"
   fi
