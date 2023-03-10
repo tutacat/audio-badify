@@ -10,7 +10,7 @@ do
     -h|--help)
     echo "$@"
     echo -e "Audio Badify script (ffmpeg) usage.\n\naudio-badify -[m] <input> <output>\n-h  --help  Show this help.\n-m  --mode  Badify mode, currently 1 (22.5Khz), or 2 (8Khz)\n    --exec  Specify the ffmpeg executable\n-y          ffmpeg assume yes (overwrite, etc.)"
-    exit 1
+    exit 0
     shift
     ;;
     -m|--mode)
