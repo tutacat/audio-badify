@@ -34,6 +34,13 @@ do
 done
 
 set -- "${POSITIONAL[@]}"
+if [ ! -e $1 ]; then
+  echo $1: No such file or directory.
+  exit 1
+elif [ -d $1 ]; then
+  echo $1: Is a directory.
+  exit 1
+fi
 if [ ! -z $1 ] && [ ! -z $2 ]; then
   echo yes
   if [ ${MODE} -eq 1 ]; then
