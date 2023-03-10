@@ -25,16 +25,5 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: Install ffmpeg
-        run: bash -c 'which ffmpeg || sudo snap install ffmpeg || sudo apt-get install ffmpeg || sudo dnf install ffmpeg'
-      - name: Test help
-        run: bash audio-badify.sh -h
-      # Test run
-      - name: Run it
-        run: bash audio-badify.sh -y example.mp3 example-bad.mp3
-      # Test run
-      - name: Test missing
-        run: bash -c '! bash audio-badify.sh -y noexist.mp3 noexist-bad.mp3'
-      - name: Test dir
-        run: bash -c 'mkdir dir; ! bash audio-badify.sh -y dir noexist-bad.mp3'
-
+      - name: Run workflow tests
+        run: bash .github/myworkflow.sh
